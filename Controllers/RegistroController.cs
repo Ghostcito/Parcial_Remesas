@@ -23,13 +23,15 @@ namespace Proyecto_Parcial.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
         [HttpPost]
         public IActionResult Create(Remesa remesa)
         {
-            remesa.CalcularMonto();
-            _context.Add(remesa);
+            Remesa r = remesa;
+            r.CalcularMonto();
+            _context.Add(r);
             _context.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
