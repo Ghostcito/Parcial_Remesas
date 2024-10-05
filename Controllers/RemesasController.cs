@@ -24,6 +24,7 @@ namespace Proyecto_Parcial.Controllers
         public IActionResult Index()
         {
             var remesas = from o in _context.DataRemesa select o;
+
             return View(remesas);
         }
 
