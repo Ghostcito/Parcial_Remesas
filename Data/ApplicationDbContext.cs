@@ -10,4 +10,5 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
     public DbSet<Proyecto_Parcial.Models.Remesa> DataRemesa { get; set; }
+    public DbSet<Proyecto_Parcial.Models.Conversion> DataConversion { get; set; }
 }

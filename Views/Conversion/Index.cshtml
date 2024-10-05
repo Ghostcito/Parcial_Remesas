@@ -1,0 +1,14 @@
+@model Proyecto_Parcial.Models.Conversion
+
+<form asp-controller="Convercion" asp-action="Conver" method="post">
+    <label asp-for="Monto">Monto a convertir:</label>
+    <input asp-for="Monto" type="number" id="monto" name="monto" required>
+
+    <label asp-for="MonedaOrigen">Moneda de origen:</label>
+    <select asp-for="MonedaOrigen" id="monedaOrigen" name="monedaOrigen">
+        <option asp-for="MonedaOrigen" value="USD">USD</option>
+        <option asp-for="MonedaOrigen" value="BTC">BTC</option>
+    </select>
+
+    <button type="submit">Convertir</button>
+</form>
